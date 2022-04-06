@@ -1,0 +1,9 @@
+g++ -Wall -W -g -O0 -o aaa --std=c++11 -lgtest -L/usr/local/lib A.cxx B.cxx C.cxx main.cxx
+
+g++ -Wall -W -g -O0 -o aaa a.cxx b.cxx c.cxx Target.cxx main.cxx --std=gnu++11 -lgtest -L/usr/local/lib
+
+g++ -Wall -W -g -O0 -o aaa a.cxx b.cxx c.cxx Target.cxx AEntity.cxx BEntity.cxx CEntity.cxx TargetEntity.cxx main.cxx --std=gnu++11 -lgtest -L/usr/local/lib
+
+g++ -Wall -W -g -O0 -o aaa a.cxx b.cxx c.cxx Target.cxx AEntity.cxx BEntity.cxx CEntity.cxx TargetEntity.cxx PseudoTargetEntity.cxx main.cxx --std=gnu++11 -lgtest -L/usr/local/lib
+
+g++ -Wall -W -g -O0 -o aaa a.cxx b.cxx c.cxx Target.cxx Struct.cxx AEntity.cxx BEntity.cxx CEntity.cxx TargetEntity.cxx PseudoTargetEntity.cxx main.cxx --std=gnu++11 -lgtest -L/usr/local/lib
