@@ -61,3 +61,5 @@ typename TargetIf<T1, CIf>::COMPARE PseudoTargetEntity<T1,CIf>::compare(
   const TargetIf<T1,CIf> &) const {
   return TargetIf<T1,CIf>::COMPARE::SMALLER;
 }
+
+template class PseudoTargetEntity<struct SampleStruct, CIf>;
