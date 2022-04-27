@@ -39,13 +39,17 @@ template<class T1, class T2>
 int Target<T1,T2>::ident() const {
   return a_.ident();
 }
-// template<class T1, class T2>
-// const T2* Target<T1,T2>::pickup(int key) const {
+
+// ---- doesn’t compile from here ----
+// template<class T1,class T2>
+// const CIf* Target<T1, T2>::pickup(int key) const {
 //   T1* tmp = data_.at(key).get();
-// //  tmp-> sample struct の中身を取りたいかな
-//   std::unique_ptr<T2> t2(new T2(tmp->falsifyIdent()));
-//   return nullptr;
+//   std::unique_ptr<T2> t2 = 
+// CIf::instantiate(tmp->falsifyIdent());
+//   return t2.release();
 // }
+// ---- doesn’t compile to here ----
+
 
 template<class T1>
 Target<T1,CIf>::Target(const Target<T1,CIf>& rhs)
